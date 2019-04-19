@@ -1,0 +1,49 @@
+import java.util.Arrays; 
+public class JavaApplication76
+{
+
+             public static void main (String args[])
+{
+    int a[] ={0,0,0,0};
+    int b[]={2,1,4,3};
+    int c[]=new int[4];
+   float add=0 , total=0 ;
+   int t[]=new int[4];
+     int w[]=new int[4];
+     Arrays.sort(b, 0, 4); 
+     for(int i=0;i<4;i++)
+     {
+          int sum=0;
+         for(int j=0;j<=i;j++)
+         {
+             
+             sum=sum+b[j];
+             
+         }
+         c[i]=sum;
+     }
+    for(int i=0;i<4;i++)
+    {
+        t[i]=c[i]-a[i];
+        add=add+t[i];
+    }
+   
+  
+     for(int i=0;i<4;i++)
+    {
+      w[i]=  ( t[i]-b[i]);
+        total=total +w[i];
+    }
+     float wait=total/4;
+     System.out.println("Process"+ "\t"+ "AT"+" \t"+" BT"+" \t"+" CT"+" \t"+" TAT"+" \t"+" WT");
+     for(int k=0;k<4;k++)
+     {
+         int g=k+1;
+     System.out.println("P"+g+"\t" + a[k] + "\t " + b[k]  + "\t" + c[k] +"\t" + t[k] +"\t" + w[k] +"\t");
+             }
+     
+     
+      System.out.println("TAT is ="+add/4);
+    System.out.println("Waiting time is ="+wait);
+}
+}
